@@ -1,37 +1,32 @@
 import MenuLink from "./menuLink";
+import { menuTitles } from "./menuTitles";
 
 export default function Menu() {
   const menus = [
     {
-      link: "/darhboard_alt.png",
-      text: "Dashboard",
-      isDropdown: false,
+      text: menuTitles.DASHBOARD,
+      isDropdown: false
     },
     {
-        link: "/team_mang.png",
-        text: "Team management",
-        isDropdown: true,
-      },
-      {
-        link: "/comunication_sidebar.png",
-        text: "Comunication",
-        isDropdown: true,
-      },
-      {
-        link: "/administration_sidebar.png",
-        text: "Administration",
-        isDropdown: true,
-      },
-      {
-        link: "/scout_sidebar.png",
-        text: "Scout",
-        isDropdown: true,
-      },
-      {
-        link: "/settings_sidebar.png",
-        text: "Settings",
-        isDropdown: true,
-      }
+      text: menuTitles.TEAM_MANAGEMENT,
+      isDropdown: true
+    },
+    {
+      text: menuTitles.COMUNICATION,
+      isDropdown: true
+    },
+    {
+      text: menuTitles.ADMINISTRATION,
+      isDropdown: true
+    },
+    {
+      text: menuTitles.SCOUT,
+      isDropdown: true
+    },
+    {
+      text: menuTitles.SETTINGS,
+      isDropdown: true
+    },
   ];
 
   return (
@@ -40,7 +35,6 @@ export default function Menu() {
         <MenuLink
           key={m.text}
           text={m.text}
-          link={m.link}
           isDropdown={m.isDropdown}
         />
       ))}
